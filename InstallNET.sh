@@ -639,7 +639,7 @@ d-i partman-lvm/device_remove_lvm boolean true
 d-i partman-md/device_remove_md boolean true
 d-i partman-lvm/confirm boolean true
 d-i partman-auto-lvm/guided_size string max
-d-i partman-auto-lvm/new_vg_name string vg00
+#d-i partman-auto-lvm/new_vg_name string vg00
 d-i partman-partitioning/confirm_write_new_label boolean true
 d-i partman/choose_partition select finish
 d-i partman-auto/method string regular
