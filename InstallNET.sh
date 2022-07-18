@@ -636,7 +636,6 @@ umount /media || true; \
 
 d-i partman-auto/choose_recipe select atomic
 d-i partman/default_filesystem string xfs
-d-i partman-auto/disk string /dev/sda
 d-i partman-lvm/device_remove_lvm boolean true
 d-i partman-md/device_remove_md boolean true
 d-i partman-lvm/confirm boolean true
@@ -659,7 +658,8 @@ d-i pkgsel/upgrade select none
 popularity-contest popularity-contest/participate boolean false
 
 d-i grub-installer/only_debian boolean true
-d-i grub-installer/bootdev string /dev/sda
+d-i grub-installer/bootdev string default
+d-i grub-installer/force-efi-extra-removable boolean true
 d-i finish-install/reboot_in_progress note
 d-i debian-installer/exit/reboot boolean true
 d-i preseed/late_command string	\
