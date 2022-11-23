@@ -635,6 +635,7 @@ cp -f '/net.bat' './net.bat'; \
 umount /media || true; \
 
 d-i partman-auto/choose_recipe select atomic
+d-i partman-auto/disk string /dev/sda
 d-i partman/default_filesystem string xfs
 d-i partman-lvm/device_remove_lvm boolean true
 d-i partman-md/device_remove_md boolean true
